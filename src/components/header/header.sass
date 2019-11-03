@@ -1,0 +1,29 @@
+@import "../../pages/common/vars"
+
+.header
+  background-color: $light-color
+  padding: 25px 0
+  border-bottom: 1px solid #dcdcdc
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &_right
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-item
+      margin-right: 40px
+      a
+        font-size: 16px
+        font-weight: 500
+        color: $faint-dark-color
+        text-transform: uppercase
+      &_active a
+        color: $active-color
+  &-btn
+    margin-left: 50px

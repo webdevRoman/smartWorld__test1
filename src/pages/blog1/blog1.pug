@@ -1,5 +1,18 @@
 extends ../base
 
+include ../mixins
+
 block main
-  h1 Blog1 page
-  include ../../components/menu/menu.pug
+  section.main
+    .container
+      .main-text
+        .main-text__pretitle Latest info
+        h2.main-text__title Our blog post
+        .main-text__page Home - Right Side Bar Blog
+      .main-img
+        img(src="img/blog1/main-img.png", alt="Main image")
+  .blog
+    .container
+      .blog-list
+        +blogItem("img/blog1/1.jpg", "The master bedroom suite is spaci of ", "16 June, 2018", "22", "36", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.")
+      .blog-sidebar

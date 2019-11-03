@@ -1,2 +1,22 @@
-h1
-  color: red
+@import "../common/vars"
+
+.main
+  padding: 35px 0
+  background-color: $light-color
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-text
+    &__pretitle
+      font-size: 18px
+      font-weight: 500
+      margin-bottom: 30px
+    &__title
+      font-size: 42px
+      font-weight: bold
+      text-transform: uppercase
+      margin-bottom: 30px
+    &__page
+      font-size: 16px
+      font-weight: 500

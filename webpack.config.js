@@ -8,6 +8,7 @@ const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
 const vendors = require('./webpack/common');
 const images = require('./webpack/images');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
@@ -34,7 +35,10 @@ const common = merge([
         filename: 'blog1.html',
         chunks: ['blog1'],
         template: PATHS.src + '/pages/blog1/blog1.pug'
-      })
+      }),
+      new CopyWebpackPlugin([
+        { from: `${PATHS.src}/img`, to: `${PATHS.build}/img` }
+      ])
     ]
   },
   pug(),
