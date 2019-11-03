@@ -20,3 +20,107 @@
     &__page
       font-size: 16px
       font-weight: 500
+  &-img
+    width: 430px
+
+.blog
+  padding: 130px 0
+  .container
+    display: flex
+    justify-content: space-between
+  &-list
+    flex-basis: 65%
+  &-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 40px 40px 40px 390px
+    border-radius: 5px
+    box-shadow: 0 0 76px 0 #e9e9e9
+    overflow: hidden
+    margin-bottom: 50px
+    position: relative
+    &__img
+      height: 100%
+      width: 360px
+      overflow: hidden
+      margin-right: 30px
+      position: absolute
+      top: 0
+      left: 0
+      img
+        width: auto
+        height: 100%
+    &__title
+      font-size: 18px
+      font-weight: 500
+      margin-bottom: 25px
+    &__info
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 40px
+      font-size: 16px
+      color: lighten($faint-dark-color, 0.1)
+    &__icon
+      display: inline-block
+      vertical-align: middle
+      width: 18px
+      margin-right: 10px
+    &__text
+      font-size: 16px
+      color: $faint-dark-color
+      margin-bottom: 40px
+    &__link
+      display: flex
+      align-items: center
+      font-size: 16px
+      font-weight: 500
+      color: $dark-color
+      .blog-item__arrow, .blog-item__arrow:before, .blog-item__arrow:after
+        content: ''
+        display: block
+        width: 16px
+        height: 2px
+        background-color: $dark-color
+        margin-left: 10px
+      .blog-item__arrow:before
+        width: 8px
+        transform-origin: bottom right
+        transform: translateX(-1px) rotate(-45deg)
+      .blog-item__arrow:after
+        width: 8px
+        transform-origin: top right
+        transform: translateX(-1px) translateY(-1px) rotate(45deg)
+  &-pagination
+    display: flex
+    &__btn
+      padding: 12px 15px
+      background-color: $active-color
+      font-size: 22px
+      font-weight: 500
+      color: $main-color
+      &:first-child
+        border-top-left-radius: 3px
+        border-bottom-left-radius: 3px
+      &:last-child
+        border-top-right-radius: 3px
+        border-bottom-right-radius: 3px
+      &_active
+        background-color: $main-color
+        color: $active-color
+      .blog-pagination__btn_next, .blog-pagination__btn_next:before
+        content: ''
+        display: block
+        width: 10px
+        height: 2px
+        background-color: $main-color
+        transform-origin: center right
+      .blog-pagination__btn_next
+        transform: rotate(45deg)
+      .blog-pagination__btn_next:before
+        transform: rotate(-90deg)
+    &__arrow
+      display: flex
+      justify-content: center
+      align-items: center

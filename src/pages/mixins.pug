@@ -6,13 +6,16 @@ mixin blogItem(imgPath, title, date, comments, likes, text)
       .blog-item__title= title
       .blog-item__info
         .blog-item__date
-          img(src="img/blog1/date.svg", alt="Calendar")
+          .blog-item__icon
+            img(src="img/blog1/calendar.svg", alt="Calendar")
           = date
         .blog-item__comments
-          img(src="img/blog1/comments.svg", alt="Message")
+          .blog-item__icon
+            img(src="img/blog1/comment.svg", alt="Message")
           = comments
         .blog-item__likes
-          img(src="img/blog1/like.svg", alt="Heart")
+          .blog-item__icon
+            img(src="img/blog1/like.svg", alt="Heart")
           = likes
       .blog-item__text= text
       a(href="#").blog-item__link
