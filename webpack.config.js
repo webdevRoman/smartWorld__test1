@@ -6,6 +6,7 @@ const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
 const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
+const vendors = require('./webpack/common');
 const images = require('./webpack/images');
 
 const PATHS = {
@@ -22,24 +23,6 @@ const common = merge([
     output: {
       path: PATHS.build,
       filename: 'js/[name].js'
-    },
-    optimization: {
-      splitChunks: {
-        cacheGroups: {
-          vendor: {
-            name: 'vendors',
-            test: /node_modules/,
-            chunks: 'all',
-            enforce: true,
-          },
-          common: {
-            name: 'common',
-            test: /common/,
-            chunks: 'all',
-            enforce: true
-          }
-        }
-      }
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -62,7 +45,8 @@ module.exports = function(env) {
   if (env === 'production') {
     return merge([
       common,
-      extractCSS()
+      extractCSS(),
+      vendors()
     ]);
   }
   if (env === 'development') {
