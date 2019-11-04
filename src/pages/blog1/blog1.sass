@@ -57,6 +57,9 @@
       font-weight: 500
       color: $dark-color
       margin-bottom: 25px
+      transition: 0.3s
+      &:hover
+        color: $active-color
     &__info
       display: flex
       justify-content: space-between
@@ -79,6 +82,11 @@
       font-size: 16px
       font-weight: 500
       color: $dark-color
+      transition: 0.3s
+      &:hover
+        color: $active-color
+        .blog-item__arrow, .blog-item__arrow:before, .blog-item__arrow:after
+          background-color: $active-color
       .blog-item__arrow, .blog-item__arrow:before, .blog-item__arrow:after
         content: ''
         display: block
@@ -86,10 +94,11 @@
         height: 2px
         background-color: $dark-color
         margin-left: 10px
+        transition: 0.3s
       .blog-item__arrow:before
         width: 8px
         transform-origin: bottom right
-        transform: translateX(-1px) rotate(-45deg)
+        transform: translateX(-1px) translateY(-1px) rotate(-45deg)
       .blog-item__arrow:after
         width: 8px
         transform-origin: top right
@@ -102,15 +111,13 @@
       font-size: 22px
       font-weight: 500
       color: $main-color
+      transition: 0.3s
       &:first-child
         border-top-left-radius: 3px
         border-bottom-left-radius: 3px
       &:last-child
         border-top-right-radius: 3px
         border-bottom-right-radius: 3px
-      &_active
-        background-color: $main-color
-        color: $active-color
       .blog-pagination__btn_next, .blog-pagination__btn_next:before
         content: ''
         display: block
@@ -122,10 +129,16 @@
         transform: rotate(45deg)
       .blog-pagination__btn_next:before
         transform: rotate(-90deg)
+    .blog-pagination__btn_active, .blog-pagination__btn:hover
+      background-color: $main-color
+      color: $active-color
     &__arrow
       display: flex
       justify-content: center
       align-items: center
+      &:hover
+        .blog-pagination__btn_next, .blog-pagination__btn_next:before
+          background-color: $active-color
 
   &-sidebar
     flex-basis: 360px
@@ -182,6 +195,9 @@
         font-weight: 500
         color: $dark-color
         margin-bottom: 15px
+        transition: 0.3s
+        &:hover
+          color: $active-color
       &__text
         font-size: 16px
         color: $faint-dark-color
@@ -192,6 +208,9 @@
       font-size: 16px
       color: $faint-dark-color
       margin-bottom: 30px
+      transition: 0.3s
+      &:hover
+        color: $active-color
       &:last-child
         border-bottom: none
         margin-bottom: 0
@@ -204,3 +223,8 @@
       color: $faint-dark-color
       margin-right: 15px
       margin-bottom: 15px
+      transition: 0.3s
+      &:hover
+        background-color: $active-color
+        border: none
+        color: $main-color

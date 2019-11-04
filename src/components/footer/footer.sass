@@ -22,6 +22,11 @@
     &__icon
       max-width: 20px
       margin-right: 15px
+      svg use
+        transition: 0.3s
+      &:hover
+        svg use
+          fill: $active-color
   &-menu
     &__column
       flex-basis: 10%
@@ -34,6 +39,9 @@
       font-size: 16px
       color: $faint-dark-color
       margin-bottom: 20px
+      transition: 0.3s
+      &:hover
+        color: $active-color
       &:last-child
         margin-bottom: 0
   &-2
@@ -46,3 +54,6 @@
       font-size: 16px
       color: $faint-dark-color
       margin-left: 40px
+      transition: 0.3s
+      &:hover
+        color: $active-color
