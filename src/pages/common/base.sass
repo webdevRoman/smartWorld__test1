@@ -1,4 +1,5 @@
 @import "../../components/header/header"
+@import "../../components/footer/footer"
 @import "./vars"
   
 // Reset
@@ -40,6 +41,8 @@ button
   cursor: pointer
 img
   width: 100%
+*
+  box-sizing: border-box
 
 .container
   width: $xl
@@ -58,3 +61,40 @@ img
   font-weight: bold
   text-transform: uppercase
   color: $light-color
+
+  &-up
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 45px
+    height: 45px
+    border-radius: 5px
+    background-color: $active-color
+    position: fixed
+    bottom: 25px
+    right: 100px
+    .btn-up__arrow, .btn-up__arrow:before, .btn-up__arrow:after
+      content: ''
+      display: block
+      width: 2px
+      height: 24px
+      background-color: $main-color
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -12px
+      margin-left: -1px
+    // .btn-up__arrow:before, .btn-up__arrow:after
+    //   position: absolute
+    //   top: 50%
+    //   left: 50%
+    //   margin-top: -6px
+    //   margin-left: -1px
+    .btn-up__arrow:before
+      height: 12px
+      transform-origin: top center
+      transform: rotate(45deg)
+    .btn-up__arrow:after
+      height: 12px
+      transform-origin: top center
+      transform: translateX(-1px) rotate(-45deg)

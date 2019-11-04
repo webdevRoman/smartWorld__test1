@@ -3,7 +3,7 @@ mixin blogItem(imgPath, title, date, comments, likes, text)
     .blog-item__img
       img(src=imgPath, alt="Post image")
     .blog-item__descr
-      .blog-item__title= title
+      a(href="#").blog-item__title= title
       .blog-item__info
         .blog-item__date
           .blog-item__icon
