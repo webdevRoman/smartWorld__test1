@@ -28,6 +28,9 @@
   .container
     display: flex
     justify-content: space-between
+  &-btn
+    display: none
+    transition: 0.3s
   &-list
     flex-basis: 750px
   &-item
@@ -228,3 +231,175 @@
         background-color: $active-color
         border: none
         color: $main-color
+.blog .container .blog-sidebar_active
+  transform: translateX(0)
+.blog-btn_active
+  transform: rotate(180deg)
+
+@media(max-width: 992px)
+  html body
+    .main
+      &-img
+        width: 340px
+    .blog
+      padding: 70px 0
+      overflow: hidden
+      .container
+        display: block
+        position: relative
+      &-btn
+        padding: 0
+        position: absolute
+        top: -50px
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 30px
+        height: 30px
+        border-radius: 3px
+        background-color: $active-color
+        .blog-btn__arrow, .blog-btn__arrow:before, .blog-btn__arrow:after
+          content: ''
+          display: block
+          width: 12px
+          height: 1px
+          background-color: $main-color
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-left: -6px
+          margin-top: -0.5px
+        .blog-btn__arrow:before
+          width: 6px
+          transform-origin: center left
+          transform: rotate(45deg)
+        .blog-btn__arrow:after
+          width: 6px
+          transform-origin: center left
+          transform: translateY(0.5px) rotate(-45deg)
+      &-item
+        padding: 20px 20px 20px 280px
+        margin-bottom: 30px
+        &__img
+          width: 260px
+          margin-right: 20px
+        &__title:hover
+          color: $dark-color
+        &__link:hover
+          color: $dark-color
+          .blog-item__arrow, .blog-item__arrow:before, .blog-item__arrow:after
+            background-color: $dark-color
+      .blog-pagination
+        &__btn:hover
+          background-color: $active-color
+          color: $main-color
+        &__arrow:hover
+          .blog-pagination__btn_next, .blog-pagination__btn_next:before
+            background-color: $main-color
+      &-sidebar
+        width: 400px
+        padding: 30px
+        background-color: $main-color
+        box-shadow: 0 0 25px 0 rgba(#000, 0.6)
+        position: absolute
+        top: 0
+        right: 0
+        transform: translateX(130%)
+        transition: 0.3s
+      &-widget
+        &__post__title:hover
+          color: $dark-color
+        &__category:hover
+          color: $faint-dark-color
+        &__tag:hover
+          background-color: transparent
+          border: solid 1px lighten($faint-dark-color, 30)
+          color: $faint-dark-color
+@media(max-width: 768px)
+  html body
+    .blog
+      &-item
+        padding: 10px 10px 10px 170px
+        &__img
+          width: 150px
+        &__title
+          font-size: 14px
+          margin-bottom: 15px
+        &__info
+          font-size: 12px
+          margin-bottom: 20px
+        &__icon
+          width: 14px
+          margin-right: 5px
+        &__text
+          font-size: 14px
+          margin-bottom: 20px
+        &__link
+          font-size: 14px
+      &-pagination
+        &__btn
+          padding: 5px 8px
+          font-size: 16px
+      &-search
+        margin-bottom: 20px
+        &__input
+          height: 40px
+          padding: 7px 7px 7px 10px
+          font-size: 14px
+        &__btn
+          height: 40px
+          padding: 5px
+      &-widget
+        padding: 20px 15px
+        margin-bottom: 20px
+        &__title
+          font-size: 20px
+          margin-bottom: 15px
+        &__post
+          justify-content: flex-start
+          margin-bottom: 15px
+          &__img
+            width: 50px
+            margin-right: 15px
+          &__title
+            font-size: 14px
+            margin-bottom: 5px
+          &__text
+            font-size: 12px
+        &__category
+          padding-bottom: 5px
+          font-size: 14px
+          margin-bottom: 10px
+        &__tag
+          font-size: 12px
+@media(max-width: 576px)
+  html body
+    .main
+      &-text
+        &__pretitle
+          font-size: 14px
+          margin-bottom: 10px
+        &__title
+          font-size: 32px
+          margin-bottom: 10px
+        &__page
+          font-size: 14px
+      &-img
+        display: none
+    .blog
+      &-item
+        padding-left: 110px
+        &__img
+          width: 100px
+        &__title
+          margin-bottom: 10px
+        &__info
+          margin-bottom: 10px
+        &__icon
+          width: 10px
+        &__text
+          font-size: 12px
+          margin-bottom: 10px
+      &-sidebar
+        width: 300px
