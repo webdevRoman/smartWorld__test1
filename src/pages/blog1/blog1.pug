@@ -3,14 +3,7 @@ extends ../base
 include ../mixins
 
 block main
-  section.main
-    .container
-      .main-text
-        .main-text__pretitle Latest info
-        h2.main-text__title Our blog post
-        .main-text__page Home - Right Side Bar Blog
-      .main-img
-        img(src="img/blog1/main-img.png", alt="Main image")
+  include ../../components/blog-main/blog-main
   .blog
     .container
       button.blog-btn
@@ -28,44 +21,4 @@ block main
           a(href="#").blog-pagination__btn 4
           a(href="#").blog-pagination__btn.blog-pagination__arrow
             .blog-pagination__btn_next
-      .blog-sidebar
-        .blog-search
-          input.blog-search__input(type="text", placeholder="Search")
-          button.blog-search__btn
-            img(src="img/blog1/search.svg", alt="Search icon")
-        .blog-widget
-          .blog-widget__title Recent Post
-          .blog-widget__post
-            .blog-widget__post__img
-              img(src="img/blog1/recent-1.jpg", alt="Recent post image")
-            .blog-widget__post__descr
-              a(href="#").blog-widget__post__title The Master bedroom
-              .blog-widget__post__text Lorem ipsum dolor sit amet,  icing.
-          .blog-widget__post
-            .blog-widget__post__img
-              img(src="img/blog1/recent-2.jpg", alt="Recent post image")
-            .blog-widget__post__descr
-              a(href="#").blog-widget__post__title The Master bedroom
-              .blog-widget__post__text Lorem ipsum dolor sit amet,  icing.
-          .blog-widget__post
-            .blog-widget__post__img
-              img(src="img/blog1/recent-3.jpg", alt="Recent post image")
-            .blog-widget__post__descr
-              a(href="#").blog-widget__post__title The Master bedroom
-              .blog-widget__post__text Lorem ipsum dolor sit amet,  icing.
-        .blog-widget
-          .blog-widget__title Category
-          a(href="#").blog-widget__category Cloud Hosting
-          a(href="#").blog-widget__category Shared Hosting
-          a(href="#").blog-widget__category VPS Hosting
-          a(href="#").blog-widget__category Uncatagorized
-        .blog-widget
-          .blog-widget__title Popular Tags
-          a(href="#").blog-widget__tag Apps
-          a(href="#").blog-widget__tag Awards
-          a(href="#").blog-widget__tag Web Template
-          a(href="#").blog-widget__tag Awards
-          a(href="#").blog-widget__tag Web Template
-          a(href="#").blog-widget__tag UI
-          a(href="#").blog-widget__tag Web Template
-          a(href="#").blog-widget__tag Awards
+      include ../../components/blog-sidebar/blog-sidebar

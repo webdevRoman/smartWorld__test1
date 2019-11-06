@@ -1,2 +1,2 @@
-import './index.sass';
+import './post.sass';
 import '../common/base.sass';
