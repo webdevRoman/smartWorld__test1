@@ -1,5 +1,55 @@
 extends ../base
 
 block main
-  h1 Post page
-  //- include ../../components/menu/menu.pug
+  include ../../components/blog-main/blog-main
+  .blog
+    .container
+      button.blog-btn
+        .blog-btn__arrow
+      .blog-post
+        .blog-post__img
+          img(src="img/post/main-img.jpg", alt="Post image")
+        .blog-post__title The master bedroom suite is phenomenally spacious
+        .blog-post__info
+          .blog-post__date
+            .blog-post__icon
+              img(src="img/blog1/calendar.svg", alt="Calendar")
+            | 16 June, 2018
+          .blog-post__comments
+            .blog-post__icon
+              img(src="img/blog1/comment.svg", alt="Message")
+            | 22
+          .blog-post__likes
+            .blog-post__icon
+              img(src="img/blog1/like.svg", alt="Heart")
+            | 36
+        p.blog-post__passage Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. There’s such a thing as “too much information”, especially for the companies scaling out their sales operations. That’s why Attentive was born in 2015 help sales teams make their increasing pipelines simpler to manage. Indeed, the small, Portugal-based team is itself focused on scaling, having much participated in accelerator In this episode, Attentive founder and CTO Pedro Araújo talks about what it takes to build a tech new product from the ground up. Discover their approach to running an engineering team, from adopting new open source technologies, to onboarding junior developers and learning .
+        q.blog-post__quotation There’s such a thing as “too much information”, especially for the companies scaling out their sales operations. That’s why Attentive was born in 2015 help sales.
+        p.blog-post__passage Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. There’s such a thing as “too much information”, especially for the companies scaling out their sales operations. That’s why Attentive was born in 2015 help sales teams make their increasing pipelines simpler to manage. Indeed, the small, Portugal-based team is itself focused on scaling, having much participated in accelerator In this episode,
+        .blog-post__addinfo
+          .blog-post__tags
+            | Tags:
+            .blog-post__tag Awards
+          .blog-post__share
+            | Share
+            .blog-share__icon
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640"><path d="M396.98 0C303.74 0 243.49 61.82 243.49 157.51C243.49 162.35 243.49 186.55 243.49 230.13C193.42 230.13 165.6 230.13 160.04 230.13C152.83 230.13 146.99 235.97 146.99 243.18C146.99 253.7 146.99 337.88 146.99 348.4C146.99 355.61 152.84 361.45 160.04 361.45C165.6 361.45 193.42 361.45 243.49 361.45C243.49 520.75 243.49 609.25 243.49 626.95C243.49 634.16 249.33 640 256.54 640C267.43 640 354.52 640 365.41 640C372.62 640 378.46 634.15 378.46 626.95C378.46 609.25 378.46 520.75 378.46 361.45C437 361.45 469.53 361.45 476.03 361.45C483.24 361.45 489.08 355.61 489.08 348.4C489.08 337.88 489.12 253.7 489.12 243.18C489.12 239.72 487.74 236.4 485.3 233.95C482.85 231.5 479.53 230.13 476.06 230.13C469.56 230.13 437.02 230.13 378.46 230.13C378.46 193.19 378.46 172.67 378.46 168.56C378.46 138.98 385.51 123.95 424.06 123.95C429.65 123.95 474.37 123.94 479.96 123.93C487.17 123.93 493.01 118.09 493.01 110.89C493.01 101.11 493.01 22.95 493.01 13.18C493.01 5.99 487.18 0.15 479.98 0.13C463.38 0.11 405.28 0.01 396.98 0Z" id="dJ1PaRK9Y"></path><use xlink:href="#dJ1PaRK9Y" opacity="1" fill="#929292" fill-opacity="1"></use></svg>
+            .blog-share__icon
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640"><path d="M564.4 142.28C591.6 126.04 612.36 100.52 622.12 69.76C596.76 84.88 568.76 95.56 538.92 101.52C514.84 75.88 480.52 60 443.08 60C370.44 60 311.96 118.96 311.96 191.24C311.96 201.64 312.84 211.64 315 221.16C205.92 215.84 109.4 163.56 44.56 83.92C33.24 103.56 26.6 126.04 26.6 150.24C26.6 195.68 50 235.96 84.88 259.28C63.8 258.88 43.12 252.76 25.6 243.12C25.6 243.52 25.6 244.04 25.6 244.56C25.6 308.32 71.08 361.28 130.72 373.48C120.04 376.4 108.4 377.8 96.32 377.8C87.92 377.8 79.44 377.32 71.48 375.56C88.48 427.52 136.72 465.72 194.08 466.96C149.44 501.88 92.76 522.92 31.4 522.92C20.64 522.92 10.32 522.44 0 521.12C58.12 558.6 127 580 201.28 580C442.72 580 574.72 380 574.72 206.64C574.72 200.84 574.52 195.24 574.24 189.68C600.28 171.2 622.16 148.12 640 121.56C616.2 132 590.84 138.92 564.4 142.28Z" id="bG4iiC5ry"></path><use xlink:href="#bG4iiC5ry" opacity="1" fill="#929292" fill-opacity="1"></use></svg>
+            .blog-share__icon
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="438.542px" height="438.543px" viewBox="0 0 438.542 438.543" style="enable-background:new 0 0 438.542 438.543;" xml:space="preserve"><path id="blablabla" d="M288.078,367.164c-12.748,0-23.887-2.95-33.4-8.85c-7.427-4.381-12.368-10.089-14.842-17.132   c-2.673-6.852-4.001-23.223-4.001-49.115V179.58h103.921v-68.806H235.834V0h-62.53c-2.856,22.458-7.992,41.109-15.415,55.963   c-7.424,14.655-17.227,27.218-29.408,37.685c-12.183,10.282-26.934,18.276-44.255,23.984v61.955h48.535v153.889   c0,20.365,2.096,35.69,6.28,45.967c3.999,10.283,11.519,20.272,22.557,29.981c11.419,9.514,24.554,16.652,39.399,21.406   c15.418,5.14,33.12,7.713,53.105,7.713c18.274,0,34.735-1.813,49.392-5.428c14.466-3.237,31.409-9.424,50.823-18.562V345.46   C332.425,359.933,310.349,367.164,288.078,367.164z"/><use xlink:href="#blablabla" opacity="1" fill="#929292" fill-opacity="1"></use></svg>
+            .blog-share__icon
+              <svg viewBox="-62 0 512 512" xmlns="http://www.w3.org/2000/svg"><path id="bla_bla2" d="m60.945312 278.21875c.640626-1.597656 7.050782-26.230469 7.5-27.898438-10.007812-15.058593-21.125-64.371093-12.597656-104.398437 9.199219-58.730469 71.4375-87.601563 130.199219-87.601563v-.109374c73.570313.046874 128.640625 40.980468 128.699219 111.476562.046875 55.179688-33.195313 128.117188-89.957032 128.117188-.015624 0-.027343 0-.042968 0-20.257813 0-45.90625-9.1875-52.632813-18.210938-7.761719-10.398438-9.667969-23.230469-5.566406-36.941406 10.050781-32.082032 22.867187-70.511719 24.363281-96.136719 1.386719-24.183594-15.773437-39.917969-38.027344-39.917969-16.746093 0-38.496093 9.726563-49.335937 37.058594-8.953125 22.707031-8.761719 46.480469.585937 72.671875 3.644532 10.238281-16.15625 76.984375-22.5 98.71875-15.761718 53.992187-37.339843 122.304687-32.726562 160.347656l4.453125 36.605469 22.367187-29.3125c30.953126-40.519531 62.957032-145.332031 71.484376-170.835938 25.210937 32.648438 77.710937 33.585938 83.832031 33.585938 75.183593 0 160.4375-74.65625 158.019531-178.5625-2.121094-91.121094-68.808594-166.875-188.632812-166.875v.117188c-113.976563 0-180.5 60.835937-196.785157 137.703124-14.914062 71.273438 18.253907 125.519532 57.300781 140.398438zm0 0"/><use xlink:href="#bla_bla2" opacity="1" fill="#929292" fill-opacity="1"></use></svg>
+            .blog-share__icon
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve"><path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73   C77.16,101.969,74.922,99.73,72.16,99.73z"/><path id="XMLID_803_" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4   c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/><path id="XMLID_804_" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599   c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319   c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995   C310,145.43,300.549,94.761,230.454,94.761z"/><use xlink:href="#XMLID_802_" opacity="1" fill="#929292" fill-opacity="1"></use><use xlink:href="#XMLID_803_" opacity="1" fill="#929292" fill-opacity="1"></use><use xlink:href="#XMLID_804_" opacity="1" fill="#929292" fill-opacity="1"></use></svg>
+        .blog-post__buttons
+          a.btn(href="#") Previous post
+          a.btn(href="#") Next post
+        form.blog-form(action="#")
+          .blog-post__title Leave a Comment
+          .blog-form__inputs
+            input.blog-form__input(type="text", placeholder="Enter Name", name="name")
+            input.blog-form__input(type="text", placeholder="Enter Email", name="email")
+          textarea.blog-form__textarea(name="comment", cols="30", rows="10", placeholder="Enter Comment")
+          button.blog-form__btn(type="submit") Submit
+      include ../../components/blog-sidebar/blog-sidebar
