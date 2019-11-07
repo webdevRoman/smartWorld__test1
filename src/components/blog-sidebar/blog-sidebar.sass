@@ -1,6 +1,9 @@
 @import '../../pages/common/vars'
 
 .blog
+  &-btn
+    display: none
+    transition: 0.3s
   &-sidebar
     flex-basis: 360px
   &-search
@@ -87,7 +90,7 @@
       transition: 0.3s
       &:hover
         background-color: $active-color
-        border: none
+        border: solid 1px $active-color
         color: $main-color
 .blog .container .blog-sidebar_active
   transform: translateX(0)
@@ -130,6 +133,37 @@
 @media(max-width: 992px)
   html body
     .blog
+      &-btn
+        padding: 0
+        position: absolute
+        top: -50px
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 30px
+        height: 30px
+        border-radius: 3px
+        background-color: $active-color
+        .blog-btn__arrow, .blog-btn__arrow:before, .blog-btn__arrow:after
+          content: ''
+          display: block
+          width: 12px
+          height: 1px
+          background-color: $main-color
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-left: -6px
+          margin-top: -0.5px
+        .blog-btn__arrow:before
+          width: 6px
+          transform-origin: center left
+          transform: rotate(45deg)
+        .blog-btn__arrow:after
+          width: 6px
+          transform-origin: center left
+          transform: translateY(0.5px) rotate(-45deg)
       &-sidebar
         width: 400px
         padding: 30px

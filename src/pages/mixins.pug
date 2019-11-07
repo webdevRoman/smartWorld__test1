@@ -3,7 +3,7 @@ mixin blogItem(imgPath, title, date, comments, likes, text)
     .blog-item__img
       img(src=imgPath, alt="Post image")
     .blog-item__descr
-      a(href="#").blog-item__title= title
+      a(href="./post.html").blog-item__title= title
       .blog-item__info
         .blog-item__date
           .blog-item__icon
@@ -18,6 +18,6 @@ mixin blogItem(imgPath, title, date, comments, likes, text)
             img(src="img/blog1/like.svg", alt="Heart")
           = likes
       .blog-item__text= text
-      a(href="#").blog-item__link
+      a(href="./post.html").blog-item__link
         | Continue Reading
         .blog-item__arrow

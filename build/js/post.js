@@ -1,6 +1,3 @@
-import './post.sass';
-import '../common/base.sass';
-
 const sidebarBtn = document.querySelector('.blog-btn');
 const sidebar = document.querySelector('.blog-sidebar');
 
