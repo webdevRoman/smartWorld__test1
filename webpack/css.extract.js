@@ -20,6 +20,12 @@ module.exports = function(paths) {
             }
           },
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: { path: 'postcss.config.js' }
+            }
+          },
           'sass-loader'
         ]
       }, {
@@ -28,7 +34,13 @@ module.exports = function(paths) {
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
-          'css-loader'
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: { path: 'postcss.config.js' }
+            }
+          }
         ]
       }]
     }

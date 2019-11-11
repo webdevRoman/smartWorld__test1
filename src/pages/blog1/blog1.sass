@@ -120,18 +120,17 @@
           background-color: $active-color
 
 @media(max-width: 1200px)
-  body
-    .blog
-      &-list
-        flex-basis: 620px
-      &-item
-        padding: 20px 20px 20px 280px
-        margin-bottom: 30px
-        &__img
-          width: 260px
-          margin-right: 20px
+  .blog
+    &-list
+      flex-basis: 620px
+    &-item
+      padding: 20px 20px 20px 280px
+      margin-bottom: 30px
+      &__img
+        width: 260px
+        margin-right: 20px
 @media(max-width: 992px)
-  html body
+  html
     .blog
       padding: 70px 0
       overflow: hidden
@@ -183,7 +182,7 @@
           padding: 5px 8px
           font-size: 16px
 @media(max-width: 576px)
-  html body
+  html body .blog
     .blog
       &-item
         padding-left: 110px

@@ -33,6 +33,7 @@
       margin-right: 10px
     &__passage
       font-size: 16px
+      line-height: 27px
       color: $faint-dark-color
       margin-bottom: 35px
       &_last
@@ -43,6 +44,7 @@
       display: block
       padding: 0 100px
       font-size: 16px
+      line-height: 27px
       margin-bottom: 35px
       &:before
         content: ''
@@ -74,6 +76,7 @@
         background-color: $active-color
         color: $main-color
     &__share
+      max-width: 50%
       display: flex
       align-items: center
       font-size: 16px
@@ -137,12 +140,11 @@
         justify-content: flex-end
 
 @media(max-width: 1200px)
-  body
-    .blog
-      &-post
-        flex-basis: 620px
+  .blog
+    &-post
+      flex-basis: 620px
 @media(max-width: 992px)
-  html body
+  html
     .blog
       padding: 70px 0
       overflow: hidden
@@ -184,6 +186,7 @@
           margin-right: 5px
         &__passage
           font-size: 14px
+          line-height: 20px
           margin-bottom: 20px
           &_last
             padding-bottom: 30px
@@ -191,6 +194,7 @@
         &__quotation
           padding: 0 60px
           font-size: 14px
+          line-height: 20px
           margin-bottom: 20px
           &:before
             width: 40px
@@ -225,7 +229,7 @@
           font-size: 14px
           margin-bottom: 15px
 @media(max-width: 576px)
-  html body
+  html body .blog
     .blog
       &-post
         &__img
@@ -238,11 +242,6 @@
           margin-left: 7px
           &:first-child
             margin-left: 10px
-      .blog-post__btn
-          width: 110px
-          padding: 5px
-          &:first-child
-            margin-right: 10px
       &-form
         &__inputs
           flex-wrap: wrap
@@ -250,3 +249,8 @@
           flex-basis: 100%
           &:first-child
             margin-bottom: 15px
+    .blog-post__btn
+      width: 110px
+      padding: 5px
+      &:first-child
+        margin-right: 10px

@@ -9,6 +9,7 @@ const extractCSS = require('./webpack/css.extract');
 const vendors = require('./webpack/common');
 const images = require('./webpack/images');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const babel = require('./webpack/babel');
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
@@ -20,7 +21,8 @@ const common = merge([
     entry: {
       'index': PATHS.src + '/pages/index/index.js',
       'blog1': PATHS.src + '/pages/blog1/blog1.js',
-      'post': PATHS.src + '/pages/post/post.js'
+      'post': PATHS.src + '/pages/post/post.js',
+      'faq': PATHS.src + '/pages/faq/faq.js'
     },
     output: {
       path: PATHS.build,
@@ -42,13 +44,19 @@ const common = merge([
         chunks: ['post'],
         template: PATHS.src + '/pages/post/post.pug'
       }),
+      new HtmlWebpackPlugin({
+        filename: 'faq.html',
+        chunks: ['faq'],
+        template: PATHS.src + '/pages/faq/faq.pug'
+      }),
       new CopyWebpackPlugin([
         { from: `${PATHS.src}/img`, to: `${PATHS.build}/img` }
       ])
     ]
   },
   pug(),
-  images()
+  images(),
+  babel()
 ]);
 
 module.exports = function(env) {
