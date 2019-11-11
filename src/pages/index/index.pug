@@ -19,15 +19,118 @@ html(lang="en")
           button.btn.main-descr__btn Download
           button.btn.main-descr__btn Free Trial
       .main-phones
-        .main-phone_center
-          .main-phone__bangs
-          img(src="img/index/phone-center.jpg", alt="Display image")
         .main-phone_left
           .main-phone__bangs
           img(src="img/index/phone-left.jpg", alt="Display image")
+        .main-phone_center
+          .main-phone__bangs
+          img(src="img/index/phone-center.jpg", alt="Display image")
         .main-phone_right
           .main-phone__bangs
           img(src="img/index/phone-right.jpg", alt="Display image")
+
+    .features#section-2
+      a(href="#section-2").features-arrow
+        .features-arrow__arrow
+      .container
+        .features-item
+          .features-item__icon
+            img(src="img/index/feature-1.svg", alt="Feature image")
+          .features-item__title Analysis
+          .features-item__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        .features-item
+          .features-item__icon
+            img(src="img/index/feature-2.svg", alt="Feature image")
+          .features-item__title Clean Design
+          .features-item__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        .features-item
+          .features-item__icon
+            img(src="img/index/feature-3.svg", alt="Feature image")
+          .features-item__title Messaging
+          .features-item__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+
+    .description
+      .container
+        .description-item
+          .description-images
+            .description-images__rectangle
+            .description-images__img
+              img(src="img/index/descr-11.jpg", alt="Photo")
+            .description-images__img
+              img(src="img/index/descr-12.jpg", alt="Photo")
+          .description-descr
+            .description-descr__title Easy Messaging
+            .description-descr__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            a(href="#").description-descr__link
+              | Read More
+              .description-descr__link__arrow
+        .description-item
+          .description-descr
+            .description-descr__title Keep In Touch
+            .description-descr__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            a(href="#").description-descr__link
+              | Read More
+              .description-descr__link__arrow
+          .description-images
+            .description-images__rectangle
+            .description-images__img
+              img(src="img/index/descr-21.jpg", alt="Photo")
+            .description-images__img
+              img(src="img/index/descr-22.jpg", alt="Photo")
+
+    section.work
+      .container
+        .work-title How Does It Works?
+        .work-descr Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+        .work-stages
+          .work-stage
+            .work-stage__icon
+              img(src="img/index/stage-1.svg", alt="Stage image")
+            .work-stage__title Create An Account
+            .work-stage__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          .work-stage
+            .work-stage__icon
+              img(src="img/index/stage-2.svg", alt="Stage image")
+            .work-stage__title Confirm Email
+            .work-stage__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          .work-stage
+            .work-stage__icon
+              img(src="img/index/stage-3.svg", alt="Stage image")
+            .work-stage__title See Results
+            .work-stage__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+
+    .pricing
+      .container
+        .pricing-item.pricing-descr
+          .pricing-descr__title Pricing Plan
+          .pricing-descr__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+          .pricing-descr__buttons
+            button.btn.pricing-descr__btn Monthly
+            button.btn.pricing-descr__btn Yearly
+        .pricing-item.pricing-plan
+          .pricing-plan__icon
+            .pricing-plan__icon_add
+              img(src="img/index/plan-1.svg", alt="Plan image")
+          .pricing-plan__title Standard
+          .pricing-plan__feature 2gb Hosting
+          .pricing-plan__feature 10 Custom Domain
+          .pricing-plan__feature SSD Hosting
+          .pricing-plan__feature 50 gb Bandwith
+          .pricing-plan__feature Free Support
+          .pricing-plan__price <span class="pricing-plan__price__currency">$</span>19.00
+          button.btn.pricing-plan__btn Try Now
+        .pricing-item.pricing-plan
+          .pricing-plan__icon
+            .pricing-plan__icon_add
+              img(src="img/index/plan-2.svg", alt="Plan image")
+          .pricing-plan__title Premium
+          .pricing-plan__feature 2gb Hosting
+          .pricing-plan__feature 10 Custom Domain
+          .pricing-plan__feature SSD Hosting
+          .pricing-plan__feature 50 gb Bandwith
+          .pricing-plan__feature Free Support
+          .pricing-plan__price <span class="pricing-plan__price__currency">$</span>49.00
+          button.btn.pricing-plan__btn Try Now
 
     include ../../components/footer/footer.pug
     a(href="#top").btn-up

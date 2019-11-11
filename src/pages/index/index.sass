@@ -5,6 +5,7 @@ $phone-color: #eee
 .main
   background: $light-color url(../../img/index/main-bg.svg) center center no-repeat
   background-size: cover
+  overflow: hidden
   .header
     background-color: transparent
     border-bottom: none
@@ -15,11 +16,13 @@ $phone-color: #eee
       margin-top: -36px
       border-bottom-left-radius: 20px
       border-bottom-right-radius: 20px
+      margin-right: 100px
       a
         color: $main-color
     .header-btn
       background-color: darken($active-color, 10)
       border: 2px solid darken($active-color, 10)
+      margin-left: 100px
       &:hover
         background-color: $light-color
         color: $active-color
@@ -40,12 +43,17 @@ $phone-color: #eee
       width: 165px
       &:first-child
         margin-right: 30px
+  &-phones
+    display: flex
+    justify-content: center
+    align-items: flex-end
   &-phone
     &_center
       display: flex
       justify-content: center
-      align-items: flex-end
+      align-items: flex-start
       width: 345px
+      max-height: 550px
       border: 15px solid $phone-color
       border-bottom: none
       border-top-right-radius: 50px
@@ -53,7 +61,6 @@ $phone-color: #eee
       background-color: $phone-color
       box-shadow: 0 0 62px 0 rgba(#000, 0.2)
       overflow: hidden
-      margin: 0 auto
       position: relative
       z-index: 5
       .main-phone__bangs
@@ -70,14 +77,407 @@ $phone-color: #eee
           content: ''
           display: block
           width: 44px
-          height: 8px
-          background-color: darken($phone-color, 2
-          box-shadow: inset 2px 2px 5px rgba(#000, 0.2)
+          height: 10px
+          border-radius: 5px
+          background-color: darken($phone-color, 10)
+          box-shadow: inset 0 0 3px rgba(#000, 0.3)
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-top: -10px
+          margin-left: -35px
+        &:after
+          content: ''
+          display: block
+          width: 18px
+          height: 18px
+          border-radius: 50%
+          background-color: darken($phone-color, 10)
+          box-shadow: inset 0 0 3px rgba(#000, 0.3)
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-top: -14px
+          margin-left: 18px
+  &-phones
+    .main-phone_left, .main-phone_right
+      display: flex
+      justify-content: center
+      align-items: flex-start
+      width: 260px
+      max-height: 490px
+      border: 13px solid $phone-color
+      border-bottom: none
+      border-top-right-radius: 40px
+      border-top-left-radius: 40px
+      background-color: $phone-color
+      box-shadow: 0 0 62px 0 rgba(#000, 0.2)
+      overflow: hidden
+      position: relative
+      z-index: 3
+      .main-phone__bangs
+        width: 120px
+        height: 20px
+        background-color: $phone-color
+        position: absolute
+        top: 0
+        left: 50%
+        margin-left: -60px
+        border-bottom-left-radius: 20px
+        border-bottom-right-radius: 20px
+        &:before
+          content: ''
+          display: block
+          width: 30px
+          height: 6px
+          border-radius: 5px
+          background-color: darken($phone-color, 10)
+          box-shadow: inset 0 0 3px rgba(#000, 0.3)
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-top: -6px
+          margin-left: -25px
+        &:after
+          content: ''
+          display: block
+          width: 14px
+          height: 14px
+          border-radius: 50%
+          background-color: darken($phone-color, 10)
+          box-shadow: inset 0 0 3px rgba(#000, 0.3)
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-top: -10px
+          margin-left: 14px
+    .main-phone_left
+      margin-right: -20px
+    .main-phone_right
+      margin-left: -20px
+
+.features
+  padding: 165px 0 130px 0
+  background-color: $light-color
+  position: relative
+  &-arrow
+    position: absolute
+    top: 0
+    right: 50%
+    margin-top: -35px
+    margin-right: -35px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 70px
+    height: 70px
+    background-color: $main-color
+    border: 1px solid lighten($faint-dark-color, 30)
+    border-radius: 50%
+    z-index: 10
+    transition: 0.3s
+    .features-arrow__arrow, .features-arrow__arrow:before, .features-arrow__arrow:after
+      content: ''
+      display: block
+      width: 2px
+      height: 38px
+      background-color: lighten($faint-dark-color, 30)
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-left: -1px
+      margin-top: -19px
+      transition: 0.3s
+    .features-arrow__arrow:before
+      height: 19px
+      transform-origin: bottom center
+      transform: translateY(19px) rotate(45deg)
+    .features-arrow__arrow:after
+      height: 19px
+      transform-origin: bottom center
+      transform: translateY(19px) translateX(0.5px) rotate(-45deg)
+    &:hover
+      border: 1px solid $active-color
+      .features-arrow__arrow, .features-arrow__arrow:before, .features-arrow__arrow:after
+        background-color: $active-color
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &-item
+    padding: 40px 30px
+    background-color: $main-color
+    border-radius: 5px
+    box-shadow: 0 0 25px 0 $shadow-color
+    text-align: center
+    margin-right: 30px
+    &__icon
+      width: 70px
+      height: 70px
+      padding: 20px
+      border-radius: 50%
+      margin: 0 auto 30px auto
+    &:first-child
+      .features-item__icon
+        background-color: #dfedff
+    &:nth-child(2)
+      margin-top: 50px
+      .features-item__icon
+        background-color: #f5dfff
+    &:last-child
+      margin-right: 0
+      .features-item__icon
+        background-color: #dfffe3
+    &__title
+      font-size: 18px
+      font-weight: 500
+      margin-bottom: 25px
+    &__text
+      font-size: 16px
+      line-height: 1.7
+      color: $faint-dark-color
+
+.description
+  padding: 60px 0
+  background-color: $main-color
+  &-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &:first-child
+      margin-bottom: 130px
+      .description
+        &-images
+          .description-images__img
+            &:nth-child(2)
+              width: 260px
+              max-height: 395px
+              top: 80px
+              left: 60px
+            &:last-child
+              width: 220px
+              max-height: 330px
+              top: 110px
+              left: 245px
+    &:last-child
+      .description
+        &-images
+          .description-images__img
+            &:nth-child(2)
+              width: 260px
+              max-height: 395px
+              top: 30px
+              left: -75px
+            &:last-child
+              width: 220px
+              max-height: 330px
+              top: 70px
+              left: 90px
+  &-images
+    position: relative
+    &__rectangle
+      width: 390px
+      height: 460px
+      border-radius: 40px
+      background-color: $active-color
+      transform: rotate(-40deg)
+    &__img
+      border-radius: 5px
+      position: absolute
+      overflow: hidden
+  &-descr
+    max-width: 550px
+    &__title
+      font-size: 32px
+      font-weight: 500
+      margin-bottom: 30px
+    &__text
+      font-size: 16px
+      line-height: 1.7
+      color: $faint-dark-color
+      margin-bottom: 35px
+    &__link
+      display: flex
+      align-items: center
+      font-family: Quicksand
+      font-size: 16px
+      font-weight: 500
+      color: $active-color
+      transition: 0.3s
+      .description-descr__link__arrow, .description-descr__link__arrow:before, .description-descr__link__arrow:after
+        content: ''
+        display: block
+        width: 16px
+        height: 2px
+        background-color: $active-color
+        margin-left: 10px
+        transition: 0.3s
+      .description-descr__link__arrow:before
+        width: 8px
+        transform-origin: bottom right
+        transform: translateX(-1px) translateY(-1px) rotate(-45deg)
+      .description-descr__link__arrow:after
+        width: 8px
+        transform-origin: top right
+        transform: translateX(-1px) translateY(-1px) rotate(45deg)
+      &:hover
+        color: $dark-color
+        .description-descr__link__arrow, .description-descr__link__arrow:before, .description-descr__link__arrow:after
+          background-color: $dark-color
+
+.work
+  padding: 130px 0
+  background-color: $light-color
+  text-align: center
+  &-title
+    font-size: 32px
+    font-weight: 500
+    margin-bottom: 40px
+    position: relative
+    z-index: 5
+    &:before
+      content: ''
+      display: block
+      width: 65px
+      height: 65px
+      background-image: url(../../img/index/title-bg.svg)
+      background-size: contain
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -28px
+      margin-left: -49px
+      z-index: -1
+    &:after
+      content: ''
+      display: block
+      width: 65px
+      height: 65px
+      background-image: url(../../img/index/title-bg.svg)
+      background-size: contain
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -36px
+      margin-left: -4px
+      z-index: -1
+  &-descr
+    max-width: 730px
+    font-size: 16px
+    line-height: 1.69
+    color: $faint-dark-color
+    margin: 0 auto
+    padding-bottom: 100px
+    border-bottom: 1px solid $active-color
+  &-stages
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-stage
+    margin-right: 95px
+    &:last-child
+      margin-right: 0
+    &__icon
+      width: 100px
+      height: 100px
+      padding: 25px
+      border-radius: 50%
+      background-color: #dfedff
+      margin: -50px auto 30px auto
+    &__title
+      font-size: 18px
+      font-weight: 500
+      margin-bottom: 30px
+    &__text
+      font-size: 16px
+      line-height: 1.7
+      color: $faint-dark-color
+
+.pricing
+  padding: 130px 0
+  background-color: $main-color
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-item
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
+  &-descr
+    width: 360px
+    &__title
+      font-size: 32px
+      font-weight: 500
+      margin-bottom: 30px
+    &__text
+      font-size: 16px
+      line-height: 1.7
+      margin-bottom: 35px
+      color: $faint-dark-color
+    &__buttons
+      display: flex
+      .pricing-descr__btn
+        width: 165px
+        text-transform: none
+        &:first-child
+          border-right: none
+          border-top-right-radius: 0
+          border-bottom-right-radius: 0
+        &:last-child
+          border-left: none
+          border-top-left-radius: 0
+          border-bottom-left-radius: 0
+  &-plan
+    padding: 40px 100px
+    border-radius: 5px
+    box-shadow: 0 0 68px 0 $shadow-color
+    text-align: center
+    &__icon
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100px
+      height: 100px
+      padding: 12px
+      background-color: #dfedff
+      border-radius: 50%
+      margin: 0 auto 30px auto
+      &_add
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 12px
+        background-color: #cfe4fe
+        border-radius: 50%
+    &__title
+      font-size: 18px
+      font-weight: 500
+      padding-bottom: 30px
+      border-bottom: 1px solid lighten($faint-dark-color, 30)
+      margin-bottom: 30px
+    &__feature
+      font-size: 16px
+      color: $faint-dark-color
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 30px
+    &__price
+      font-size: 32px
+      font-weight: 500
+      color: $active-color
+      margin-bottom: 40px
+      &__currency
+        font-size: 18px
+  
 
 
 
 
-@media(max-width: 1570px)
+
+
+
+@media(max-width: 1660px)
   .main .header
     .logo
       margin-right: 20px
@@ -85,6 +485,8 @@ $phone-color: #eee
       margin-top: -26px
       a
         font-size: 32px
+    .header-btn
+      margin-left: 20px
 @media(max-width: 1425px)
   html .header
     .container-header
