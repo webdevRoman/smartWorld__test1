@@ -21,13 +21,15 @@ $phone-color: #eee
       a
         color: $main-color
     .header-btn
+      padding: 15px
+      width: 165px
       background-color: darken($active-color, 10)
       border: 2px solid darken($active-color, 10)
       margin-left: 100px
       &:hover
         background-color: $light-color
         color: $active-color
-  &-descr
+  .main-descr
     text-align: center
     margin-bottom: 80px
     &__title
@@ -42,6 +44,7 @@ $phone-color: #eee
       margin: 0 auto 35px auto
     &__btn
       width: 165px
+      text-transform: none
       &:first-child
         margin-right: 30px
   &-phones
@@ -437,6 +440,11 @@ $phone-color: #eee
           border-left: none
           border-top-left-radius: 0
           border-bottom-left-radius: 0
+          background-color: $main-color
+          color: $active-color
+          &:hover
+            background-color: $active-color
+            color: $main-color
   &-plan
     padding: 40px 100px
     border-radius: 5px
@@ -710,6 +718,8 @@ $phone-color: #eee
       font-family: Quicksand
       font-size: 16px
       color: $main-color
+      &::placeholder
+        color: $main-color
     &__btn
       padding: 20px 40px
       flex-basis: 165px
@@ -850,6 +860,8 @@ body .btn-up
         .container-header
           width: 470px
         .header-btn
+          padding: 15px 30px
+          width: auto
           &:hover
             background-color: darken($active-color, 10)
             color: $main-color
@@ -961,6 +973,10 @@ body .btn-up
           margin-bottom: 20px
         &__buttons
           justify-content: center
+        .pricing-descr__btn:last-child
+          &:hover
+            background-color: $main-color
+            color: $active-color
       &-plan
         padding: 30px 60px
         &__icon
@@ -1064,6 +1080,8 @@ body .btn-up
   html body
     .main 
       .header
+        .header-btn
+          padding: 10px 20px
         .container-header
           width: 280px
       &-descr
@@ -1234,11 +1252,13 @@ body .btn-up
     .main
       background-image: none
       .header
+        .header-btn
+          border-radius: 20px
         .container-header
           width: 250px
         .header-btn
           margin-left: 0
-      &-descr
+      .main-descr
         margin-bottom: 40px
         &__title
           font-size: 22px

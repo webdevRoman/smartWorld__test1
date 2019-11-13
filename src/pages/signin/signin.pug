@@ -1,0 +1,17 @@
+extends ../base
+
+block main
+  section.signin
+    .signin-title Log In
+    .signin-descr Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+    .signin-buttons
+      button.signin-buttons__btn.signin-buttons__facebook Facebook
+      button.signin-buttons__btn.signin-buttons__twitter Twitter
+    .signin-or Or
+    form.signin-form
+      input.signin-form__input(type="text", placeholder="Email Address")
+      input.signin-form__input(type="password", placeholder="Password")
+      .signin-form__links
+        a.signin-form__link(href="#") Forgot Passowrd?
+        a.signin-form__link(href="#") Create a free account?
+      button.btn.signin-form__btn(type="submit") Login

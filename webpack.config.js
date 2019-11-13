@@ -22,7 +22,9 @@ const common = merge([
       'index': PATHS.src + '/pages/index/index.js',
       'blog1': PATHS.src + '/pages/blog1/blog1.js',
       'post': PATHS.src + '/pages/post/post.js',
-      'faq': PATHS.src + '/pages/faq/faq.js'
+      'faq': PATHS.src + '/pages/faq/faq.js',
+      'signin': PATHS.src + '/pages/signin/signin.js',
+      'signup': PATHS.src + '/pages/signup/signup.js'
     },
     output: {
       path: PATHS.build,
@@ -48,6 +50,16 @@ const common = merge([
         filename: 'faq.html',
         chunks: ['faq'],
         template: PATHS.src + '/pages/faq/faq.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'signin.html',
+        chunks: ['signin'],
+        template: PATHS.src + '/pages/signin/signin.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'signup.html',
+        chunks: ['signup'],
+        template: PATHS.src + '/pages/signup/signup.pug'
       }),
       new CopyWebpackPlugin([
         { from: `${PATHS.src}/img`, to: `${PATHS.build}/img` }

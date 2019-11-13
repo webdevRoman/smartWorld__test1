@@ -46,6 +46,9 @@
       font-weight: 500
       color: $dark-color
       transition: 0.3s
+      &_active
+        background-color: $active-color
+        color: $main-color
       &:first-child
         border-top-left-radius: 5px
         border-top-right-radius: 5px
@@ -60,6 +63,7 @@
   &-questions
     flex-basis: 650px
   &-question
+    display: none
     margin-bottom: 50px
     &__title
       font-size: 24px
@@ -69,6 +73,8 @@
       font-size: 16px
       color: $faint-dark-color
       line-height: 1.7
+    &_active
+      display: block
   &-help
     display: flex
     align-items: center
@@ -144,7 +150,7 @@
       .container
         display: block
       &-sidebar
-        width: 400px
+        width: 300px
         background-color: $main-color
         border-radius: 5px
         box-shadow: 0 0 25px 0 rgba(#000, 0.6)
@@ -154,9 +160,14 @@
         transform: translateX(-150%)
         transition: 0.3s
         &__link
+          padding: 12px 20px
+          font-size: 16px
           &:hover
             background-color: transparent
             color: $dark-color
+          &_active:hover
+            background-color: $active-color
+            color: $main-color
       &-questions
         width: 100%
       &-help
@@ -196,6 +207,9 @@
       &-img
         display: none
     .faq
+      &-sidebar
+        &__link
+          font-size: 14px
       &-question
         &__title
           font-size: 18px

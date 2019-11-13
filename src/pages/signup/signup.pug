@@ -1,0 +1,19 @@
+extends ../base
+
+block main
+  section.signup
+    .signup-title Sign Up
+    .signup-descr Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+    .signup-buttons
+      button.signup-buttons__btn.signup-buttons__facebook Facebook
+      button.signup-buttons__btn.signup-buttons__twitter Twitter
+    .signup-or Or
+    form.signup-form
+      input.signup-form__input(type="text", placeholder="Enter full name")
+      input.signup-form__input(type="text", placeholder="Email Address")
+      input.signup-form__input(type="password", placeholder="Password")
+      input.signup-form__input(type="password", placeholder="Confirm Password")
+      .signup-form__signin
+        | Already have account? 
+        a.signup-form__link(href="./signin.html") Log In
+      button.btn.signup-form__btn(type="submit") Sign Up

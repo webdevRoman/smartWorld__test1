@@ -1,0 +1,147 @@
+@import "../common/vars"
+
+.signup
+  padding: 130px 0
+  background-color: $main-color
+  &-title
+    font-size: 32px
+    font-weight: 500
+    text-align: center
+    margin-bottom: 35px
+  &-descr
+    width: 730px
+    font-size: 16px
+    line-height: 1.7
+    color: $faint-dark-color
+    text-align: center
+    margin: 0 auto 45px auto
+  &-buttons
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 50px
+    &__btn
+      width: 165px
+      padding: 20px
+      border-radius: 5px
+      font-size: 16px
+      font-weight: bold
+      color: $main-color
+      text-transform: uppercase
+      transition: 0.3s
+      &:hover
+        background-color: $main-color
+    &__facebook
+      background-color: #3b5999
+      border: 2px solid #3b5999
+      margin-right: 30px
+      &:hover
+        color: #3b5999
+    &__twitter
+      background-color: #55acee
+      border: 2px solid #55acee
+      &:hover
+        color: #55acee
+  &-or
+    font-size: 16px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 50px
+  &-form
+    &__input
+      display: block
+      width: 360px
+      padding: 20px 30px
+      background-color: $main-color
+      border: 1px solid lighten($faint-dark-color, 30)
+      border-radius: 5px
+      font-size: 16px
+      color: $faint-dark-color
+      margin: 0 auto 30px auto
+      transition: 0.3s
+      &::placeholder
+        color: $faint-dark-color
+      &:focus
+        border: 1px solid $active-color
+    &__signin
+      font-size: 16px
+      color: $faint-dark-color
+      text-align: center
+      margin: 0 auto 30px auto
+    &__link
+      color: $active-color
+      transition: 0.3s
+      &:hover
+        color: $dark-color
+    .signup-form__btn
+      display: block
+      width: 165px
+      padding: 15px
+      text-transform: none
+      margin: 0 auto
+
+@media(max-width: 992px)
+  html .signup
+    padding: 70px 0
+    &-buttons
+      &__facebook
+        &:hover
+          background-color: #3b5999
+          color: $main-color
+      &__twitter
+        &:hover
+          background-color: #55acee
+          color: $main-color
+    &-form
+      &__link
+        &:hover
+          color: $active-color
+      .signup-form__btn
+        padding: 10px 25px
+@media(max-width: 768px)
+  html body .signup
+    &-title
+      font-size: 26px
+      margin-bottom: 20px
+    &-descr
+      width: 540px
+      font-size: 14px
+      line-height: 1.5
+      margin-bottom: 30px
+    &-buttons
+      margin-bottom: 35px
+      &__btn
+        width: 120px
+        padding: 10px
+        font-size: 14px
+    &-or
+      font-size: 14px
+      margin-bottom: 35px
+    &-form
+      &__input
+        padding: 10px 20px
+        font-size: 14px
+        margin-bottom: 20px
+      &__signin
+        font-size: 14px
+        margin-bottom: 20px
+      .signup-form__btn
+        width: 120px
+@media(max-width: 576px)
+  html body section.signup
+    padding: 50px 0
+    .signup
+      &-descr
+        width: 300px
+      &-buttons
+        &__facebook
+          margin-right: 15px
+      &-form
+        &__input
+          width: 300px
+        &__signin
+          font-size: 12px
+        &__btn
+          padding: 5px
+          width: 90px
+          font-size: 12px
